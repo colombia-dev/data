@@ -1,0 +1,697 @@
+[
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Timestamp using expression value.toDate()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Timestamp",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column ¿Cuanto es su salario ANUAL? using expression grel:value.replace(/^\\$|,|\\.00$/, '').toNumber()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "¿Cuanto es su salario ANUAL?",
+    "expression": "grel:value.replace(/^\\$|,|\\.00$/, '').toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column ¿Cuanto era el salario ANUAL de su trabajo anterior? using expression grel:value.replace(/^\\$|,|\\.00$/, '').toNumber()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "¿Cuanto era el salario ANUAL de su trabajo anterior?",
+    "expression": "grel:value.replace(/^\\$|,|\\.00$/, '').toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column ¿En que ciudad de Colombia vive? using expression value.replace(/\\s+/,' ')",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column ¿En que ciudad de Colombia vive? using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column ¿En que ciudad de Colombia vive? using expression value.toTitlecase()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bogotá D.C.",
+          "Bogota D.C",
+          "Bogotá Dc",
+          "Bogotá D.C"
+        ],
+        "to": "Bogotá"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bogotá",
+          "Bogota",
+          "Bogotá, Bogotá"
+        ],
+        "to": "Bogotá"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Armenia Quindio",
+          "Armenia ( Quindio)",
+          "Armenia, Quindio"
+        ],
+        "to": "Armenia"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Chia",
+          "Chía"
+        ],
+        "to": "Chía"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Montería",
+          "Monteria"
+        ],
+        "to": "Montería"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Medellín",
+          "Medellin"
+        ],
+        "to": "Medellín"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Popayan",
+          "Popayán"
+        ],
+        "to": "Popayán"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Tulua",
+          "Tuluá"
+        ],
+        "to": "Tuluá"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Cucuta",
+          "Cúcuta"
+        ],
+        "to": "Cúcuta"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Ibagué",
+          "Ibague"
+        ],
+        "to": "Ibagué"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Villavicencio",
+          "Villavocencio"
+        ],
+        "to": "Villavicencio"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Medellín",
+          "Medellón"
+        ],
+        "to": "Medellín"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bogotá",
+          "Bogita"
+        ],
+        "to": "Bogotá"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Medellib",
+          "Medelli"
+        ],
+        "to": "Medellín"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Tunja",
+          "Tunda"
+        ],
+        "to": "Tunja"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bogotá",
+          "Bogots"
+        ],
+        "to": "Bogotá"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Bucaramanga",
+          "Bucamanga"
+        ],
+        "to": "Bucaramanga"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Rionegro",
+          "Rionegro Antioquia"
+        ],
+        "to": "Rionegro"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Pereira",
+          "Pereira Risaralda"
+        ],
+        "to": "Pereira"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Pasto",
+          "Pasto-nariño"
+        ],
+        "to": "Pasto"
+      },
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Villavicencio",
+          "Villavicencio Meta"
+        ],
+        "to": "Villavicencio"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "envigado",
+          "name": "¿En que ciudad de Colombia vive?",
+          "type": "text",
+          "columnName": "¿En que ciudad de Colombia vive?"
+        }
+      ]
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Envigado",
+          "Envigado Antioquia"
+        ],
+        "to": "Envigado"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "mede",
+          "name": "¿En que ciudad de Colombia vive?",
+          "type": "text",
+          "columnName": "¿En que ciudad de Colombia vive?"
+        }
+      ]
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Medellín",
+          "Medellin, Antioquia"
+        ],
+        "to": "Medellín"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "cali",
+          "name": "¿En que ciudad de Colombia vive?",
+          "type": "text",
+          "columnName": "¿En que ciudad de Colombia vive?"
+        }
+      ]
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Cali",
+          "Santiago De Cali"
+        ],
+        "to": "Cali"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": "",
+          "name": "¿En que ciudad de Colombia vive?",
+          "type": "text",
+          "columnName": "¿En que ciudad de Colombia vive?"
+        }
+      ]
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "-"
+        ],
+        "to": ""
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "12 Soacha 402.007 Cundinamarca"
+        ],
+        "to": "Soacha"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value.split(' ')",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "(santander)",
+                "l": "(santander)"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "¿En que ciudad de Colombia vive?",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "¿En que ciudad de Colombia vive?"
+        }
+      ]
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "San Gil (santander)"
+        ],
+        "to": "San Gil"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value.split(' ')",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "-",
+                "l": "-"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "¿En que ciudad de Colombia vive?",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "¿En que ciudad de Colombia vive?"
+        }
+      ]
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "La Calera - Cundinamarca"
+        ],
+        "to": "La Calera"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value.split(' ')",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Caicedonia-valle",
+                "l": "Caicedonia-valle"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "¿En que ciudad de Colombia vive?",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "¿En que ciudad de Colombia vive?"
+        }
+      ]
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Caicedonia-valle Del Cauca"
+        ],
+        "to": "Caicedonia"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "omitError": false,
+          "expression": "value.split(' ')",
+          "selectBlank": false,
+          "selection": [
+            {
+              "v": {
+                "v": "Montenegro,",
+                "l": "Montenegro,"
+              }
+            }
+          ],
+          "selectError": false,
+          "invert": false,
+          "name": "¿En que ciudad de Colombia vive?",
+          "omitBlank": false,
+          "type": "list",
+          "columnName": "¿En que ciudad de Colombia vive?"
+        }
+      ]
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Montenegro, Quindío"
+        ],
+        "to": "Montenegro"
+      }
+    ]
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column ¿En que ciudad de Colombia vive?",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": [
+        {
+          "mode": "text",
+          "caseSensitive": false,
+          "query": ",",
+          "name": "¿En que ciudad de Colombia vive?",
+          "type": "text",
+          "columnName": "¿En que ciudad de Colombia vive?"
+        }
+      ]
+    },
+    "columnName": "¿En que ciudad de Colombia vive?",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Anserma, Caldas"
+        ],
+        "to": "Anserma"
+      }
+    ]
+  }
+]
