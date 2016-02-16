@@ -1,5 +1,5 @@
 # data
-A host for all open data iniciatives led by Colombia.dev
+A host for all open data iniciatives lead by Colombia.dev
 
 ## Directory
 - salaries folder holds the raw data for the yearly income survey
