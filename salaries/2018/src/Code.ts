@@ -122,6 +122,11 @@ function addListQuestion(form: GoogleAppsScript.Forms.Form, title: string, choic
   return form
 }
 
+function addTextQuestion(form: GoogleAppsScript.Forms.Form, title: string, helpText = "") {
+  let item = form.addTextItem().setTitle(title).setHelpText(helpText)
+  return form
+}
+
 function addNumberQuestion(form: GoogleAppsScript.Forms.Form, title: string) {
   //TODO: add number validation
   let item = form.addTextItem().setTitle(title)
@@ -143,6 +148,8 @@ function addMultipleChoiceQuesiton(form, title: string, choices: string[], showO
 
 function createForm() {
   let form = FormApp.create('Colombia Dev - Encuesta de Salarios 2018')
+  // Campo para guardar el hash del ID de usuario de Github
+  addTextQuestion(form, "Campo de uso interno", "Por favor no llene ni modifique este campo, aquí guardamos el hash de su ID de usuario de Github en caso de que haya optado por autenticarse.")
 
   addMultipleChoiceQuesiton(form, "¿Para qué tipo de empresa trabaja?", [
     "empresa extranjera",
